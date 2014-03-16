@@ -4,9 +4,11 @@
     "cates": [
         {"name": "tech", "text":"工作"},
         {"name": "life", "text":"生活"},
+	{"name": "observe", "text":"互联网观察"}
         {"name": "other", "text":"其它"}
     ],
     "articles":[
+	{"title": "愿得一人心", "file": "2014-03-16-shopping", "cate":"life"},
 	{"title": "看车日记", "file": "2014-03-16-car", "cate":"life"},
 	{"title": "git建站学习", "file": "2014-03-16-git", "cate":"tech"},
 	{"title": "JSBlog博客程序", "file": "2014-03-16-jsblog", "cate":"tech"}
