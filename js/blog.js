@@ -17,11 +17,11 @@ $(function() {
         activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
     });
 	//ceshi
- 
+
     var blog = {};
     blog.views = {};
     blog.helper = {};
- 
+
 
     blog.helper.build_main_model = function(data) {
         var result = {};
@@ -34,6 +34,11 @@ $(function() {
                 text: cate.text
             };
         });
+        return result;
+    };
+
+	blog.helper.build_link_model = function(data) {
+        var result = {"links":data.links};
         return result;
     };
 
@@ -50,7 +55,7 @@ $(function() {
         result.months = _.groupBy(articles, function(article) {
             return article.file.substring(0, 7);
         });
-        
+
         result.months = _.map(result.months, function(value, key) {
             return {
                 month: key,
@@ -79,7 +84,7 @@ $(function() {
         var pagecounts = Math.ceil(articles.length/10);
         for (var i = 1; i <= pagecounts; i++) {
 
-            pages[i] = {"num":i} ; 
+            pages[i] = {"num":i} ;
         };
 
         result.pages = pages;
@@ -87,7 +92,7 @@ $(function() {
         result.num_up = pagenum-1<=0?1:pagenum-1;
 
         result.num_next = parseInt(pagenum)+1>pagecounts?pagecounts:parseInt(pagenum)+1;
-        
+
         return result;
 
     }
@@ -123,7 +128,7 @@ $(function() {
             host = urls[0]+'show/';
             return host;
     }
-    
+
     // 转化引擎
     blog.helper.markdown = new Showdown.converter();
 
@@ -132,72 +137,72 @@ $(function() {
         var host = blog.helper.getHost();
 
 		var url = 'http://'+location.host+'/#show/'+file;
-        
+
         var el = document.createElement('div');//该div不需要设置class="ds-thread"
         el.setAttribute('data-thread-key', file);//必选参数
         el.setAttribute('data-url', url);//必选参数
         el.setAttribute('data-title', title);//必选参数
         DUOSHUO.EmbedThread(el);
         _div.append(el);
-        
-         
+
+
     }
 
     // 评论列表
 
     blog.helper.addDiscuzList = function(_div){
 
-        var _discuz_title = document.createElement('h3'); 
+        var _discuz_title = document.createElement('h3');
         _discuz_title.innerHTML="最新评论";
         _div.append(_discuz_title);
 
-        var el = document.createElement('ul'); 
+        var el = document.createElement('ul');
         el.setAttribute('data-num-items', "10");
-        
-        el.setAttribute('data-excerpt-length',"70"); 
-        el.setAttribute('data-show-title', "0"); 
 
-        
+        el.setAttribute('data-excerpt-length',"70");
+        el.setAttribute('data-show-title', "0");
+
+
         DUOSHUO.RecentComments(el);
-    
+
         _div.append(el);
- 
-       
-         
+
+
+
     }
 
     //近期访客
     blog.helper.addDiscuzUsers = function(_div){
 
-        var _discuz_title = document.createElement('h3'); 
+        var _discuz_title = document.createElement('h3');
         _discuz_title.innerHTML="近期访客";
         _div.append(_discuz_title);
 
-        var el = document.createElement('ul'); 
+        var el = document.createElement('ul');
         el.setAttribute('data-num-items', "10");
-        el.setAttribute('data-excerpt-length',"70"); 
-        el.setAttribute('data-show-title', "0"); 
+        el.setAttribute('data-excerpt-length',"70");
+        el.setAttribute('data-show-title', "0");
 
-        
+
         DUOSHUO.RecentVisitors(el);
         _div.append(el);
- 
-       
-         
+
+
+
     }
 
     blog.helper.addpages = function(index,articles,_div){
-        var el = document.createElement('ul'); 
+        var el = document.createElement('ul');
         el.setAttribute('data-num-items', "10");
-        el.setAttribute('data-excerpt-length',"70"); 
-        el.setAttribute('data-show-title', "0"); 
+        el.setAttribute('data-excerpt-length',"70");
+        el.setAttribute('data-show-title', "0");
 
     }
 
-    
-  
 
-  
+
+
+
 
     //代码高亮
     blog.helper.highlight = function () {
@@ -214,7 +219,7 @@ $(function() {
         },
         render:function(){
             var html = Mustache.to_html(this.template, this.model);
-           
+
             $(this.el).append(html);
             return this;
         }
@@ -222,6 +227,20 @@ $(function() {
 
     blog.views.Sidebar = Backbone.View.extend({
         template: $('#tpl-sidebar').html(),
+        initialize: function(options) {
+            this.model = options.model;
+            _.bindAll(this, 'render');
+        },
+        render: function() {
+            var html = Mustache.to_html(this.template, this.model);
+            $(this.el).append(html);
+            return this;
+        }
+    });
+
+
+	blog.views.Link = Backbone.View.extend({
+        template: $('#tpl-link').html(),
         initialize: function(options) {
             this.model = options.model;
             _.bindAll(this, 'render');
@@ -255,17 +274,17 @@ $(function() {
             blog.helper.highlight();
         }
     });
-    
-   
+
+
 
     blog.views.Main = Backbone.View.extend({
         el: $('.main-body'),
         template: $('#tpl-main').html(),
         initialize: function() {
-            
+
             _.bindAll(this, 'render');
             _.bindAll(this, 'sync');
-             
+
         },
         sync: function() {
             var that = this;
@@ -274,9 +293,9 @@ $(function() {
                 that.render();
             });
 
-            
+
         } ,
-        
+
         render: function() {
             if(!this.data) {
                 this.sync();
@@ -287,16 +306,19 @@ $(function() {
             var main_html = Mustache.to_html(this.template, main_model);
             $(this.el).empty().append(main_html);
 
-            //侧边栏
+            //侧边文章列表栏
             var sidebar_mode = blog.helper.build_sidebar_model(this.data, this.cate);
             var sidebar_view = new blog.views.Sidebar({
                 model: sidebar_mode
             });
             this.$(".sidebar-nav").empty().append(sidebar_view.render().el);
 
-            
-           
-
+			//侧边友情链接
+			var link_mode = blog.helper.build_link_model(this.data);
+			var links_view = new blog.views.Link({
+                model: link_mode
+            });
+			this.$(".sidebar-links").empty().append(links_view.render().el);
 
             if(this.cate) {
                 loadingIndex = false;
@@ -308,16 +330,16 @@ $(function() {
                 var article_view = new blog.views.Article({
                     article: this.article
                 });
-                
+
                 loadingIndex = false;
 
                 this.$(".article-content").empty().append(article_view.render().el);
-                 
+
                 //添加评论
                 blog.helper.addDiscuz(this.$(".article-content"),this.article,"");
-               
-              
-                 
+
+
+
             }
 
 
@@ -326,20 +348,20 @@ $(function() {
                 curIndex = 0;
                 hasShowedNum = 0;
                 loadingIndex = true;
-                 
+
                 blog.views.make_main_index(this.cate,this.data.articles,this.pagenum);
 
 
                 //页码工具条
                 var pagebar_model = blog.helper.build_pagebar_model(this.data, this.cate,this.pagenum);
-                
+
                 var pagebar_view = new blog.views.Pagebar({
                     model: pagebar_model
                 });
-               
+
                 this.$(".pagebar").empty().append(pagebar_view.render().el);
 
-                
+
 
             }
 
@@ -347,14 +369,14 @@ $(function() {
             blog.helper.addDiscuzList(this.$(".sidebar-comment"));
             blog.helper.addDiscuzUsers(this.$(".sidebar-users"));
 
-            
+
         }
     });
 
- 
 
 
-    
+
+
     //文章计数
     var curIndex = 0;
     var hasShowedNum = 0;
@@ -371,11 +393,11 @@ $(function() {
         this.curArticles = articles;
 
         if(loadingIndex){
-            
-             
-                
-                
-                
+
+
+
+
+
 
             if(curIndex<showArticleNum*(pagenum-1)){
                 curIndex = showArticleNum*(pagenum-1);
@@ -385,8 +407,8 @@ $(function() {
                 return ;
             }
 
-                
-               
+
+
 
 
             $.get("post/" + articles[curIndex].file + ".md", function(artData) {
@@ -398,14 +420,14 @@ $(function() {
                 } else {
                     html = blog.helper.markdown.makeHtml(artData);
                 }
-                
+
                 $(".article-content").append(html);
 
                 //添加继续阅读
                 $(".article-content").append("<br/>");
                 $(".article-content").append("<p><a title=\"\" class=\"btn btn-primary pull-left\" href=\"#show/" + articles[curIndex].file + "\"  onclick=\"\">继续阅读  →</a> </p><br/> <br/>");
                 $(".article-content").append("<div class=\"line_dashed\"></div>");
-                
+
                /* curIndex++;
                 if(curIndex < articles.length && curIndex < 10) {
                     addIndex(cate,articles);
@@ -417,13 +439,13 @@ $(function() {
                     hasShowedNum ++;
                     addIndex(cate,articles);
                 }
-                
+
 
             });
 
 
 
-                 
+
         }
     }
 
@@ -438,17 +460,17 @@ $(function() {
             if(!this.main) {
                 this.main = new blog.views.Main();
             }
-             
+
             this.main.cate = cate;
             this.main.article = article;
             this.main.pagenum = pagenum
             this.main.render();
-           
-             
+
+
         },
         index: function() {
             this.make_main_view(null, 'index',1);
-            
+
         },
         cate: function(cate) {
             this.make_main_view(cate, 'index',1);

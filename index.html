@@ -2,7 +2,7 @@
 <html lang="zh-cn">
     <head>
         <meta charset="utf-8">
-        
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
@@ -10,7 +10,7 @@
         <!-- Le styles -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="favicon.png" rel="shortcut icon">
-       
+
         <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
         <link href="css/skin.css" rel="stylesheet">
 
@@ -21,7 +21,7 @@
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
 
-    
+
     </head>
 
     <body>
@@ -29,7 +29,7 @@
             <div class="navbar navbar-fixed-top">
                 <div class="navbar-inner">
                     <div class="container-fluid">
-                       
+
                         <a class="brand" href="#">{{site_name}}</a>
                         <div class="nav-collapse">
                             <ul class="nav">
@@ -48,14 +48,6 @@
             <div class="container-fluid">
 
                 <div class="row-fluid">
-                    <div class="span3">
-                        <div class="well sidebar-nav">
-                        </div>
-                        <div class="well sidebar-comment">
-                        </div>
-                        <div class="well sidebar-users">
-                        </div>
-                    </div>
 
                     <div class="span9">
                         <div class="row-fluid article-content">
@@ -64,7 +56,17 @@
                         </div>
                     </div>
 
-                    
+					<div class="span3">
+                        <div class="well sidebar-nav">
+                        </div>
+                        <div class="well sidebar-comment">
+                        </div>
+                        <div class="well sidebar-users">
+                        </div>
+						<div class="well sidebar-links">
+                        </div>
+                    </div>
+
                 </div>
                 <hr>
                 <footer role="contentinfo">
@@ -87,27 +89,35 @@
             </ul>
         </script>
 
+		<script id="tpl-link" type="text/template">
+            <ul class="nav nav-list">
+                {{#links}}
+                <li><a href="{{url}}" target="_blank">{{title}}</a></li>
+                {{/links}}
+            </ul>
+        </script>
+
         <script id="tpl-pagebar" type="text/template">
             <div class="row-fluid">
                 <div class="span12">
                     <div class="pagination">
                         <ul>
-                            <li class="prev previous_page "><a href="#page/{{num_up}}">← </a></li> 
+                            <li class="prev previous_page "><a href="#page/{{num_up}}">← </a></li>
                             {{#pages}}
                                 <li ><a href="#page/{{num}}">{{num}}</a></li>
                             {{/pages}}
-                           
+
                             <li class="next next_page "><a rel="next" href="#page/{{num_next}}"> →</a></li>
-                           
+
                         </ul>
                     </div>
                 </div>
           </div>
-          
+
         </script>
 
         <script id="tpl-duoshuo" type="text/template">
-        
+
             <h3>
                 最新评论
             </h3>
@@ -127,7 +137,7 @@
                             {{author_name}}
                         </a>
                         <span class="ds-time" datetime="{{created_at}}" title="">
-                             
+
                         </span>
                     </div>
                     <a class="ds-excerpt" title="Redirect 中的评论" href="#show/{{thread_key}}">
@@ -135,15 +145,15 @@
                     </a>
                 </li>
                  {{/messages}}
-              
+
             </ul>
-        
+
         </script>
 
 
-        
-       
-     
+
+
+
         <div class="main-body">
         </div>
 
@@ -151,8 +161,8 @@
             <i class="icon icons_go_top"></i>
         </a>
 
- 
-                      
+
+
         <script src="js/json2.js"></script>
         <script src="js/jquery.min.js"></script>
         <script src="js/underscore-min.js"></script>
@@ -166,21 +176,21 @@
         <script src="js/blog.js"></script>
 
         <script>
-        
+
            var duoshuoQuery = {short_name:"lefengyang"};
 
            if (typeof DUOSHUO !== 'undefined'){
-                  
+
                 DUOSHUO.RecentComments('.ds-recent-comments');
             }
         </script>
 
-        
+
         <script src="http://static.duoshuo.com/embed.js"></script>
-        
+
 
 
 
     </body>
-  
+
 </html>
