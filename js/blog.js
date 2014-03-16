@@ -238,6 +238,18 @@ $(function() {
         }
     });
 
+	blog.views.Personal = Backbone.View.extend({
+        template: $('#tpl-person').html(),
+        initialize: function(options) {
+            this.model = options.model;
+            _.bindAll(this, 'render');
+        },
+        render: function() {
+            var html = Mustache.to_html(this.template, this.model);
+            $(this.el).append(html);
+            return this;
+        }
+    });
 
 	blog.views.Link = Backbone.View.extend({
         template: $('#tpl-link').html(),
@@ -319,6 +331,12 @@ $(function() {
                 model: link_mode
             });
 			this.$(".sidebar-links").empty().append(links_view.render().el);
+
+			//个人信息
+			var personal_view = new blog.views.Personal({
+                model: this.data.personal
+            });
+			this.$(".personal").empty().append(personal_view.render().el);
 
             if(this.cate) {
                 loadingIndex = false;

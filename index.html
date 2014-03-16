@@ -57,7 +57,9 @@
                     </div>
 
 					<div class="span3">
-                        <div class="well sidebar-nav">
+                        <div class="well personal">
+                        </div>
+						<div class="well sidebar-nav">
                         </div>
                         <div class="well sidebar-comment">
                         </div>
@@ -71,7 +73,7 @@
                 <hr>
                 <footer role="contentinfo">
                 <p>&copy; {{copyright}} Powered by <a
-                    href="https://github.com/lefengyang/lefengyang.github.io" target="_blank">野比大熊</a>
+                    href="https://github.com/lefengyang/lefengyang.github.io" target="_blank">羊君</a>
                  </p>
                 </footer>
             </div><!--/.fluid-container-->
@@ -89,7 +91,14 @@
             </ul>
         </script>
 
+		<script id="tpl-person" type="text/template">
+			<h3>个人资料</h3>
+            <img src="{{avatar}}" class="thumbnail" />
+			<h6>{{{intro}}}</h6>
+        </script>
+
 		<script id="tpl-link" type="text/template">
+			<h3>友情链接</h3>
             <ul class="nav nav-list">
                 {{#links}}
                 <li><a href="{{url}}" target="_blank">{{title}}</a></li>

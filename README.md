@@ -1,4 +1,4 @@
-# [野比大熊学习git](http://lefengyang.github.com)
+# [羊君学习git](http://lefengyang.github.com)
 
 本博客来自[多多de棉花糖](https://github.com/hugcoday/hugcoday.github.com)  
 

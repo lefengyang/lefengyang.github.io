@@ -1,5 +1,5 @@
 {
-    "site_name": "野比大熊学习git",
+    "site_name": "羊君学习git",
     "copyright": "SYSCDE",
     "cates": [
         {"name": "tech", "text":"工作"},
@@ -15,5 +15,9 @@
     ],
     "links":[
 	{"title":"tenfyguo的技术专栏", "url":"http://blog.csdn.net/tenfyguo/"}
-    ]
+    ],
+    "personal":{
+	"avatar": "/images/me.png",
+	"intro": "羊君，毕业于华南理工大学。<br/>程序员@深圳。<br/>喜欢户外运动，摄影，自驾游，shopping。<br/>曾就职于迅雷，目前就职于腾讯，web工程师。<br/>常用开发语言 : JS / PHP / C++。<br/>关注互联网行业及金融行业发展。"
+    }
 }
