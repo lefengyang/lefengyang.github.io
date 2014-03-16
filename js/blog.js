@@ -130,13 +130,13 @@ $(function() {
     // 增加多说评论
     blog.helper.addDiscuz = function (_div,file,title){
         var host = blog.helper.getHost();
+
+		var url = 'http://'+location.host+'/#show/'+file;
         
         var el = document.createElement('div');//该div不需要设置class="ds-thread"
         el.setAttribute('data-thread-key', file);//必选参数
-        el.setAttribute('data-url', file);//必选参数
+        el.setAttribute('data-url', url);//必选参数
         el.setAttribute('data-title', title);//必选参数
-        
-        el.setAttribute('data-author-key', '20001345@qq.com');//可选参数
         DUOSHUO.EmbedThread(el);
         _div.append(el);
         
