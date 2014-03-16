@@ -14,7 +14,17 @@
 	{"title": "JSBlog博客程序", "file": "2014-03-16-jsblog", "cate":"tech"}
     ],
     "links":[
-	{"title":"tenfyguo的技术专栏", "url":"http://blog.csdn.net/tenfyguo/"}
+	{"title":"tenfyguo的技术专栏", "url":"http://blog.csdn.net/tenfyguo/"},
+	{"title":"四火的唠叨", "url":"http://www.raychase.net"},
+	{"title":"C瓜哥的博客", "url":"http://www.cguage.com/"},
+	{"title":"酷 壳", "url":"http://coolshell.cn/"},
+	{"title":"哔哩哔哩", "url":"http://bilibili.kankanews.com/"},
+	{"title":"AlloyTeam", "url":"http://alloyteam.github.io/"},
+	{"title":"风雪之隅", "url":"http://www.laruence.com/"},
+	{"title":"果壳网", "url":"http://www.guokr.com"},
+	{"title":"译言", "url":"http://www.yeeyan.org/"},
+	{"title":"流言百科", "url":"http://www.liuyanbaike.com/"},
+	{"title":"CNode", "url":"http://cnodejs.org/"}
     ],
     "personal":{
 	"avatar": "/images/me.png",
