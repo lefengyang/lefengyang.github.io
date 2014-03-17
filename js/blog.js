@@ -416,7 +416,7 @@ $(function() {
 			if(!articles[curIndex]){
 				return;
 			}
-			if(articles[curIndex].cate != cate){
+			if(cate && articles[curIndex].cate != cate){
 				curIndex++;
 				addIndex(cate,articles);
 				return;
