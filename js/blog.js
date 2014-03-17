@@ -413,7 +413,14 @@ $(function() {
         if(loadingIndex){
 
 
-
+			if(!articles[curIndex]){
+				return;
+			}
+			if(articles[curIndex].cate != cate){
+				curIndex++;
+				addIndex(cate,articles);
+				return;
+			}
 
 
 
@@ -446,10 +453,6 @@ $(function() {
                 $(".article-content").append("<p><a title=\"\" class=\"btn btn-primary pull-left\" href=\"#show/" + articles[curIndex].file + "\"  onclick=\"\">继续阅读  →</a> </p><br/> <br/>");
                 $(".article-content").append("<div class=\"line_dashed\"></div>");
 
-               /* curIndex++;
-                if(curIndex < articles.length && curIndex < 10) {
-                    addIndex(cate,articles);
-                }*/
                 //总索引
                 curIndex++;
                  //显示文章计数
