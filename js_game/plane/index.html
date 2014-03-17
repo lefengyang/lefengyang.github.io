@@ -1,0 +1,35 @@
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script src="jquery.js"></script>
+		<script src="bullet.js"></script>
+		<script src="monster.js"></script>
+		<script src="stage.js"></script>
+		<script src="ctrl.js"></script>
+		<script src="boss.js"></script>
+		<script src="main.js"></script>
+	</head>
+	<body style="background-color:#000;color:#fff;">
+		<div id="container" style="position:relative;width:600px;height:600px;border:1px solid #ccc;float:left;display:inline-block;overflow:hidden;">
+			<div id="monster" style="width:48px;height:48px;left:0;top:0;display:block;background:url(img/monster.jpg);position:absolute;display:none;"></div>
+			<div id="notice" style="width:400px;text-align:center;font-size:50px;padding-top:10px;padding-bottom:10px;position:absolute;"></div>
+			<div style="display:inline-block;float:left;margin-left:20px;width:120px;">
+				<p>分数：<span id="score" style="width:100px;height:30px;display:inline-block;font-size:40px;">000</span></p>
+				<p>时间：<span id="time" style="width:100px;height:30px;display:inline-block;font-size:40px;">000</span></p>
+			</div>
+		</div>
+		<p id="life_area" style="display:inline-block;width:50px;"></p>
+		
+		<!--预加载，防止游戏开始了图片还没加载出来-->
+		<img style="display:none" src="img/bullet.jpg" />
+		<img style="display:none" src="img/monster.jpg" />
+		<img style="display:none" src="img/sky.jpg" />
+		<img style="display:none" src="img/boss1.jpg" />
+		<img style="display:none" src="img/spec.jpg" />
+		<img style="display:none" src="img/hell.jpg" />
+		<img style="display:none" src="img/boss1.jpg" />
+		<span id="life" style="width:48px;height:48px;left:0;top:0;background:url(img/monster.jpg);display:none"></span>
+	</body>
+</html>
+

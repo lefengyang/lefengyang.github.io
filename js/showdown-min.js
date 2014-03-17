@@ -166,7 +166,7 @@ Attacklab.showdown.converter = function() {
 			}
 			J = J.replace(/"/g, "&quot;");
 			H = w(H, "*_");
-			var U = '<img src="' + H + '" alt="' + J + '"';
+			var U = '<img class="thread_img" src="' + H + '" alt="' + J + '"';
 			O = O.replace(/"/g, "&quot;");
 			O = w(O, "*_");
 			U += ' title="' + O + '"';
