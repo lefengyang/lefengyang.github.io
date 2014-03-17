@@ -8,6 +8,8 @@
         {"name": "other", "text":"其它"}
     ],
     "articles":[
+	{"title": "安全感是什么？", "file": "2014-03-17-other", "cate":"other"},
+	{"title": "央行意欲何为？", "file": "2014-03-17-pay", "cate":"observe"},
 	{"title": "愿得一人心", "file": "2014-03-16-shopping", "cate":"life"},
 	{"title": "看车日记", "file": "2014-03-16-car", "cate":"life"},
 	{"title": "style与getComputedStyle区别", "file": "2013-12-19-style", "cate":"tech"},
