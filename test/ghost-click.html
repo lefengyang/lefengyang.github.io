@@ -14,7 +14,7 @@
 <script>
 var layers = document.getElementsByClassName('layer');
 for(var i=0,len=layers.length;i<len;++i){
-	layers[i].addEventListener('click', function(){
+	layers[i].addEventListener('touchend', function(){
 		var dom = this;
 		setTimeout(function(){
 			dom.style.display = 'none';
