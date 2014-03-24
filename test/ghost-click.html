@@ -15,6 +15,7 @@
 $('.layer').each(function(){
 	var dom = this;
 	$(dom).on('tap', function(){
+		console.log("you tap!");
 		setTimeout(function(){
 			$(dom).hide();
 		}, 100);
