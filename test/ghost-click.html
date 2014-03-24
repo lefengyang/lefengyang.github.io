@@ -1,4 +1,4 @@
-<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<script src="zepto.js"></script>
 
 <style>
 .layer{width:200px;height:200px;border:1px solid #ccc;text-align:center;position:absolute;background-color:#ccc;}
@@ -12,13 +12,12 @@
 
 
 <script>
-var layers = document.getElementsByClassName('layer');
-for(var i=0,len=layers.length;i<len;++i){
-	layers[i].addEventListener('touchend', function(){
-		var dom = this;
+$('.layer').each(function(){
+	var dom = this;
+	$(dom).on('tap', function(){
 		setTimeout(function(){
-			dom.style.display = 'none';
+			$(dom).hide();
 		}, 100);
-	}, false);
-}
+	});
+});
 </script>
