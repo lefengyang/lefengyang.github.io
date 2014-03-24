@@ -441,17 +441,17 @@ $(function() {
                 var html;
                 if(artData.length >= 200) {
                     html = blog.helper.markdown.makeHtml(artData.substring(0, 200));
-
                 } else {
                     html = blog.helper.markdown.makeHtml(artData);
                 }
 
-                $(".article-content").append(html);
+				var article_content = $(".article-content");
+                article_content.append(html);
 
                 //添加继续阅读
-                $(".article-content").append("<br/>");
-                $(".article-content").append("<p><a title=\"\" class=\"btn btn-primary pull-left\" href=\"#show/" + articles[curIndex].file + "\"  onclick=\"\">继续阅读  →</a> </p><br/> <br/>");
-                $(".article-content").append("<div class=\"line_dashed\"></div>");
+                article_content.append("<br/>");
+                article_content.append("<p><a title=\"\" class=\"btn btn-primary pull-left\" href=\"#show/" + articles[curIndex].file + "\">继续阅读  →</a> </p><br/> <br/>");
+                article_content.append("<div class=\"line_dashed\"></div>");
 
                 //总索引
                 curIndex++;
@@ -460,7 +460,6 @@ $(function() {
                     hasShowedNum ++;
                     addIndex(cate,articles);
                 }
-
 
             });
 

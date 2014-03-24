@@ -1,0 +1,24 @@
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+
+<style>
+.layer{width:200px;height:200px;border:1px solid #ccc;text-align:center;position:absolute;background-color:#ccc;}
+</style>
+
+<div class="layer">layer1</div>
+<div class="layer">layer2</div>
+<div class="layer">layer3</div>
+<div class="layer">layer4</div>
+<div class="layer">layer5</div>
+
+
+<script>
+var layers = document.getElementsByClassName('layer');
+for(var i=0,len=layers.length;i<len;++i){
+	layers[i].addEventListener('click', function(){
+		var dom = this;
+		setTimeout(function(){
+			dom.style.display = 'none';
+		}, 100);
+	}, false);
+}
+</script>
