@@ -8,6 +8,7 @@
         {"name": "other", "text":"其它"}
     ],
     "articles":[
+	{"title": "jQuery的事件演变", "file": "2014-03-24-jquery", "cate":"tech"},
 	{"title": "addEventListener和handleEvent", "file": "2014-03-24-handleEvent", "cate":"tech"},
 	{"title": "每天来点儿负能量（精选）", "file": "2014-03-24-other", "cate":"other"},
 	{"title": "安全感是什么？", "file": "2014-03-17-other", "cate":"other"},
