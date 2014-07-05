@@ -1,0 +1,379 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+<title>Z Club - FAQ</title>
+<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+<meta content='Sinx' name='author'>
+<meta content='General' name='rating'>
+<meta name="keywords" content="sinx,Sinx中国,专属的时尚顾问,网络造型,男人时尚顾问,男人形象顾问,在线时尚顾问,在线形象顾问,私人时尚顾问,私人形象顾问,男士搭配,男装搭配,服饰搭配顾问,形象造型顾问,成熟男士形象,sinxchina, sinx china, personal stylist, personal stylist online, men outfit stylist, men style online, stylist online">
+<meta content="Sinx男士的专属时尚顾问" name='description'>
+<meta content='user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width' name='viewport'>
+<meta content='yes' name='apple-mobile-web-app-capable'>
+<meta content="index,follow" name="robots"/>
+<link href='/favicon.ico' rel='shortcut icon'>
+<link href="css/style-cleaned.css" media="screen" rel="stylesheet" type="text/css"/>
+<script src="js/header.js"></script>
+</head>
+<body class='member_profiles'>
+<div class='wrapper'>
+	<script>SINX.writeTop()</script>
+
+	<div class="container">
+		<h2>编辑您的资料</h2>
+		<div class="edit_profile row" data-behavior="Tabs">
+			<div class='twocol'>
+				<div id="errors">
+				</div>
+				<div id="tabs">
+					<ul class="tabs">
+						<li><a data-url="#profile" href="?t=Tab1" id="Tab1">基本资料</a></li>
+						<li><a data-url="#addresses" href="?t=Tab2" id="Tab2">收货地址</a></li>
+						<li><a data-url="#preferences" href="?t=Tab3" id="Tab3">尺码信息</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class='tencol last tile' id='forms'>
+
+				<div class="" id="profile">
+					<div class='contact_info sixcol'>
+						<h3>您的联系资料</h3>
+						<div class="simple_form new_member_profile_context" id="new_member_profile_context" enctype="multipart/form-data" accept-charset="UTF-8" novalidate="novalidate" data-behavior='["MemberProfile"]'>
+							<div class="input string required">
+								<label class="string required" for="member_profile_context_first_name"><abbr title="required"></abbr>姓名</label>
+								<input name="TextBox2" type="text" value="杨乐峰" id="TextBox2" class="string required"/>
+							</div>
+							<div class="input tel required">
+								<label class="tel required" for="member_profile_context_phone"><abbr title="required"></abbr>手机号码</label>
+								<input name="signup_context_phone" type="text" value="15986742040" maxlength="11" id="signup_context_phone" class="string tel required numeric"/>
+							</div>
+							<div class="input file optional">
+								<label class="file optional" for="member_profile_context_avatar">照片 (JPG格式 <2mb)</label>
+								<input type="file" name="FileUpload1" id="FileUpload1" class="file optional"/>
+								<input type="submit" name="Button1" value="上传照片" id="Button1"/>
+								<span id="lb_info"></span>
+							</div>
+							<div class="buttons">
+								<div class="spinner">
+								</div>
+								<input type="submit" name="Button3" value="更新我的资料" id="Button3" class="button blue_button" style=" background-color:#1a4277;"/>
+								<input type="submit" name="Button4" value="修改我的密码" id="Button4" class="button blue_button" style=" background-color:#1a4277;"/>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="hidden" id="addresses">
+					<div class="row">
+						<div class="left sixcol" id='add_new_address'>
+							<h3>添加新的邮寄地址</h3>
+							<div class="simple_form new_address_context" id="new_address_context" accept-charset="UTF-8" novalidate="novalidate" data-behavior='["Addresses"]'>
+								<div class="input string required">
+									<label class="string required" for="TextBox4"><abbr title="required"></abbr>收件人</label>
+									<input name="TextBox4" type="text" id="TextBox4" class="string required large"/>
+								</div>
+								<div class="input select required">
+									<label class="select required" for="CheckBox1"><abbr title="required"></abbr>设为默认</label>
+									<input id="CheckBox1" type="checkbox" name="CheckBox1"/>
+								</div>
+								<div class="input select required">
+									<label class="select required" for="fmdoc"><abbr title="required"></abbr>地区选择</label>
+									<script type="text/javascript" src="assets/tbra-aio(1).js"></script>
+									<div class="three_input_grouping">
+										<div class="input month_select required">
+											<select class="month_select required customSelect" style="margin-bottom:3px;" name="fmdopr" id="fmdopr" title="省" onchange="javascript:doitzz(this.form);">
+											</select>
+										</div>
+										<div class="input month_select required">
+											<select class="month_select required customSelect" style="margin-bottom:3px;" name="fmdoc" id="fmdoc" title="市" onchange="javascript:doitzz(this.form);">
+											</select>
+										</div>
+										<div class="input month_select required">
+											<select class="month_select required customSelect" name="fmdoa" id="fmdoa" title="区" onchange="javascript:doitzz(this.form);">
+											</select>
+										</div>
+									</div>
+									<input name="fmdod" id="divisionCode" class="pc:divisionCode" type="hidden">
+								</div>
+								<div class="input string required">
+									<label class="string required" for="TextBox9"><abbr title="required"></abbr> 详细地址</label>
+									<input name="text4" type="text" id="text4" name="text4" onchange="javascript:doitzz(this.form);"/>
+									<input name="t180" type="text" id="t180" name="t180" class="string required short hidden"/>
+								</div>
+								<div class="input string required">
+									<label class="string required" for="address_context_mobile"><abbr title="required"></abbr>手机号码</label>
+									<input name="address_context_mobile" type="text" maxlength="11" id="address_context_mobile" class="string required large numeric"/>
+								</div>
+								<div class="input string optional hidden" style="width:250px">
+									<label class="string required" for="TextBox6">固定电话</label>
+									<input name="TextBox6" type="text" maxlength="20" id="TextBox6" class="string required large numeric"/>
+								</div>
+								<div class="buttons">
+									<div class="spinner">
+									</div>
+									<input type="submit" name="save_address" value="添加此地址" id="save_address" class="button blue_button" type="submit" data-errors="#errors" data-container=".left"/>
+								</div>
+							</div>
+						</div>
+						<div class="right sixcol last">
+							<h3>已保存的地址</h3>
+							<br>
+							<div id="no_addresses" class="no_addresses">
+							</div>
+							<ul id="all_addresses">
+								<li>
+								<table border="0">
+								<tr>
+									<td>
+										杨乐峰,深圳市南山区腾讯大厦,15986742040
+									</td>
+									<td>
+										<input type="submit" name="ctl04" value="删除" class="delete bttn header graybttn oneline"/>
+									</td>
+								</tr>
+								</table>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="hidden" id="preferences">
+					<h3>尺码信息</h3>
+					<br>
+					<div class="simple_form new_clothing_preferences_context">
+						<div class='three_input_grouping'>
+							<div class="input select required">
+								<label class="select required" for="clothing_preferences_context_height"><abbr title="required"></abbr> 身高</label>
+								<select name="DropDownList1" id="DropDownList1" class="select required customSelect">
+									<option value=""></option>
+									<option value="1.60m">1.60m</option>
+									<option value="1.61m">1.61m</option>
+									<option value="1.62m">1.62m</option>
+									<option value="1.63m">1.63m</option>
+									<option value="1.64m">1.64m</option>
+									<option value="1.65m">1.65m</option>
+									<option value="1.66m">1.66m</option>
+									<option value="1.67m">1.67m</option>
+									<option value="1.68m">1.68m</option>
+									<option value="1.69m">1.69m</option>
+									<option value="1.7m">1.7m</option>
+									<option value="1.71m">1.71m</option>
+									<option value="1.72m">1.72m</option>
+									<option value="1.73m">1.73m</option>
+									<option value="1.74m">1.74m</option>
+									<option value="1.75m">1.75m</option>
+									<option value="1.76m">1.76m</option>
+									<option value="1.77m">1.77m</option>
+									<option value="1.78m">1.78m</option>
+									<option value="1.79m">1.79m</option>
+									<option value="1.8m">1.8m</option>
+									<option selected="selected" value="1.81m">1.81m</option>
+									<option value="1.82m">1.82m</option>
+									<option value="1.83m">1.83m</option>
+									<option value="1.84m">1.84m</option>
+									<option value="1.85m">1.85m</option>
+									<option value="其他">其他</option>
+								</select>
+							</div>
+							<div class="input select required">
+								<label class="select required" for="clothing_preferences_context_weight_in_pounds"><abbr title="required"></abbr>体重</label>
+								<select name="DropDownList2" id="DropDownList2" class="select required customSelect">
+									<option value=""></option>
+									<option value="50kg">50kg</option>
+									<option value="51kg">51kg</option>
+									<option value="52kg">52kg</option>
+									<option value="53kg">53kg</option>
+									<option value="54kg">54kg</option>
+									<option value="55kg">55kg</option>
+									<option value="56kg">56kg</option>
+									<option value="57kg">57kg</option>
+									<option value="58kg">58kg</option>
+									<option value="59kg">59kg</option>
+									<option value="60kg">60kg</option>
+									<option value="61kg">61kg</option>
+									<option value="62kg">62kg</option>
+									<option value="63kg">63kg</option>
+									<option value="64kg">64kg</option>
+									<option value="65kg">65kg</option>
+									<option value="66kg">66kg</option>
+									<option value="67kg">67kg</option>
+									<option value="68kg">68kg</option>
+									<option value="69kg">69kg</option>
+									<option value="70kg">70kg</option>
+									<option value="71kg">71kg</option>
+									<option value="72kg">72kg</option>
+									<option value="73kg">73kg</option>
+									<option value="74kg">74kg</option>
+									<option value="75kg">75kg</option>
+									<option value="76kg">76kg</option>
+									<option value="77kg">77kg</option>
+									<option value="78kg">78kg</option>
+									<option value="79kg">79kg</option>
+									<option value="80kg">80kg</option>
+									<option value="81kg">81kg</option>
+									<option value="82kg">82kg</option>
+									<option value="83kg">83kg</option>
+									<option value="84kg">84kg</option>
+									<option value="85kg">85kg</option>
+									<option selected="selected" value="86kg">86kg</option>
+									<option value="87kg">87kg</option>
+									<option value="88kg">88kg</option>
+									<option value="89kg">89kg</option>
+									<option value="90kg">90kg</option>
+									<option value="其他">其他</option>
+								</select>
+							</div>
+							<div class="input select required">
+								<label class="select required" for="clothing_preferences_context_casual_shirt_size"><abbr title="required"></abbr>休闲衫大小</label>
+								<select name="DropDownList3" id="DropDownList3" class="select required customSelect">
+									<option value=""></option>
+									<option value="XS">XS</option>
+									<option value="S">S</option>
+									<option value="M">M</option>
+									<option value="L">L</option>
+									<option value="XL">XL</option>
+									<option selected="selected" value="XXL">XXL</option>
+									<option value="其他">其他</option>
+								</select>
+							</div>
+						</div>
+						<div class='three_input_grouping'>
+							<div class="input select required">
+								<label class="select required" for="clothing_preferences_context_neck_size"><abbr title="required"></abbr>脖围</label>
+								<select name="DropDownList4" id="DropDownList4" class="select required customSelect">
+									<option selected="selected" value=""></option>
+									<option value="14.5">14.5</option>
+									<option value="15">15</option>
+									<option value="15.5">15.5</option>
+									<option value="16">16</option>
+									<option value="16.5">16.5</option>
+									<option value="17">17</option>
+									<option value="17.5">17.5</option>
+									<option value="18">18</option>
+									<option value="其他">其他</option>
+									<option value="Don&#39;t know">不知道</option>
+								</select>
+							</div>
+							<div class="input select required">
+								<label class="select required" for="clothing_preferences_context_sleeve_length"><abbr title="required"></abbr>袖长</label>
+								<select name="DropDownList5" id="DropDownList5" class="select required customSelect">
+									<option selected="selected" value=""></option>
+									<option value="32/33">32/33</option>
+									<option value="34/35">34/35</option>
+									<option value="36/37">36/37</option>
+									<option value="其他">其他</option>
+									<option value="Don&#39;t know">不知道</option>
+								</select>
+							</div>
+							<div class="input select required">
+								<label class="select required" for="clothing_preferences_context_jacket_size"><abbr title="required"></abbr>西装外套大小</label>
+								<select name="DropDownList6" id="DropDownList6" class="select required customSelect">
+									<option selected="selected" value=""></option>
+									<option value="38 S">38 S</option>
+									<option value="38 R">38 R</option>
+									<option value="38 L">38 L</option>
+									<option value="39 S">39 S</option>
+									<option value="39 R">39 R</option>
+									<option value="39 L">39 L</option>
+									<option value="40 S">40 S</option>
+									<option value="40 R">40 R</option>
+									<option value="40 L">40 L</option>
+									<option value="41 S">41 S</option>
+									<option value="41 R">41 R</option>
+									<option value="41 L">41 L</option>
+									<option value="42 S">42 S</option>
+									<option value="42 R">42 R</option>
+									<option value="42 L">42 L</option>
+									<option value="43 S">43 S</option>
+									<option value="43 R">43 R</option>
+									<option value="43 L">43 L</option>
+									<option value="44 S">44 S</option>
+									<option value="44 R">44 R</option>
+									<option value="44 L">44 L</option>
+									<option value="45 S">45 S</option>
+									<option value="45 R">45 R</option>
+									<option value="45 L">45 L</option>
+									<option value="46 S">46 S</option>
+									<option value="46 R">46 R</option>
+									<option value="46 L">46 L</option>
+									<option value="其他">其他</option>
+									<option value="Don&#39;t know">不知道</option>
+								</select>
+							</div>
+						</div>
+						<div class='three_input_grouping'>
+							<div class="input select required">
+								<label class="select required" for="clothing_preferences_context_waist"><abbr title="required"></abbr> 腰围</label>
+								<select name="DropDownList7" id="DropDownList7" class="select required customSelect">
+									<option value=""></option>
+									<option value="28">28</option>
+									<option value="29">29</option>
+									<option value="30">30</option>
+									<option value="31">31</option>
+									<option value="32">32</option>
+									<option value="33">33</option>
+									<option value="34">34</option>
+									<option selected="selected" value="35">35</option>
+									<option value="36">36</option>
+									<option value="37">37</option>
+									<option value="38">38</option>
+									<option value="39">39</option>
+									<option value="40">40</option>
+									<option value="其他">其他</option>
+								</select>
+							</div>
+							<div class="input select required">
+								<label class="select required" for="clothing_preferences_context_inseam"><abbr title="required"></abbr> 内长</label>
+								<select name="DropDownList8" id="DropDownList8" class="select required customSelect">
+									<option selected="selected" value=""></option>
+									<option value="28">28</option>
+									<option value="29">29</option>
+									<option value="30">30</option>
+									<option value="31">31</option>
+									<option value="32">32</option>
+									<option value="33">33</option>
+									<option value="34">34</option>
+									<option value="35">35</option>
+									<option value="36">36</option>
+									<option value="其他">其他</option>
+									<option value="Don&#39;t know">不知道</option>
+								</select>
+							</div>
+							<div class="input select required">
+								<label class="select required" for="clothing_preferences_context_shoe_size"><abbr title="required"></abbr>鞋码</label>
+								<select name="DropDownList9" id="DropDownList9" class="select required customSelect">
+									<option selected="selected" value=""></option>
+									<option value="38">38</option>
+									<option value="39">39</option>
+									<option value="40">40</option>
+									<option value="41">41</option>
+									<option value="42">42</option>
+									<option value="43">43</option>
+									<option value="44">44</option>
+									<option value="45">45</option>
+									<option value="其他">其他</option>
+								</select>
+							</div>
+						</div>
+						<div class="buttons">
+							<div class="spinner">
+							</div>
+							<input type="submit" name="Button2" value="更新尺码信息" id="Button2" class="button blue_button" style=" background-color:#1a4277;"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<br>
+	<div class='push'>
+	</div>
+</div>
+
+<script>SINX.writeFooter()</script>
+
+</body>
+</html>
