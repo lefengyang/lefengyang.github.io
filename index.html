@@ -21,8 +21,11 @@
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
 
+		<link rel="stylesheet" type="text/css" href="css/jquery.lightbox-0.5.css" media="screen" />
+
 		<style>
 		.thread_img{width:100%;}
+		#gallary img{width:200px;}
 		</style>
 
     </head>
@@ -175,32 +178,28 @@
 
 
 
-        <script src="js/json2.js"></script>
-        <script src="js/jquery.min.js"></script>
-        <script src="js/underscore-min.js"></script>
-        <script src="js/backbone.js"></script>
-        <script src="js/mustache.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/showdown-min.js"></script>
-        <script src="js/highlight/highlight.pack.js"></script>
-        <script src="js/jquery.scrollUp.min.js"></script>
+        <script type="text/javascript" src="js/json2.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/underscore-min.js"></script>
+        <script type="text/javascript" src="js/backbone.js"></script>
+        <script type="text/javascript" src="js/mustache.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/showdown-min.js"></script>
+        <script type="text/javascript" src="js/highlight/highlight.pack.js"></script>
+        <script type="text/javascript" src="js/jquery.scrollUp.min.js"></script>
+		<script type="text/javascript" src="js/jquery.lightbox-0.5.js"></script>
 
         <script src="js/blog.js"></script>
 
         <script>
-
-           var duoshuoQuery = {short_name:"lefengyang"};
-
-           if (typeof DUOSHUO !== 'undefined'){
-
-                DUOSHUO.RecentComments('.ds-recent-comments');
-            }
+		var duoshuoQuery = {short_name:"lefengyang"};
+		if (typeof DUOSHUO !== 'undefined'){
+			DUOSHUO.RecentComments('.ds-recent-comments');
+		}
         </script>
 
 
         <script src="http://static.duoshuo.com/embed.js"></script>
-
-
 
 
     </body>

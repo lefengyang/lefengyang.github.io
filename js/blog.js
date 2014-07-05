@@ -275,6 +275,14 @@ $(function() {
             $.get('post/' + this.article + '.md', function(data) {
                 that.model = data;
                 that.render();
+
+				//画廊
+				$('#gallary a').fadeTo("slow", 0.3).hover(function(){
+					$(this).fadeTo("slow", 1.0);
+				},function(){
+					$(this).fadeTo("slow", 0.3);
+				}).lightBox({fixedNavigation:true});
+
 				window.scrollTo(0,0);//回到顶部
             });
 
@@ -432,9 +440,6 @@ $(function() {
             if(curIndex >= articles.length){
                 return ;
             }
-
-
-
 
 
             $.get("post/" + articles[curIndex].file + ".md", function(artData) {

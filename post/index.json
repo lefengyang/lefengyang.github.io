@@ -4,10 +4,12 @@
     "cates": [
         {"name": "tech", "text":"工作"},
         {"name": "life", "text":"生活"},
+	{"name": "photo", "text":"摄影"},
 	{"name": "observe", "text":"互联网观察"},
         {"name": "other", "text":"其它"}
     ],
     "articles":[
+	{"title": "近期摄影作品", "file": "2014-07-05-photo", "cate":"photo"},
 	{"title": "信号量耗尽导致apache无法启动的处理办法", "file": "2014-07-05-apache", "cate":"tech"},
 	{"title": "C++编写PHP扩展笔记", "file": "2014-07-05-php-extension", "cate":"tech"},
 	{"title": "linux下phantomJS输出中文乱码解决方法", "file": "2014-06-30-phantomJS", "cate":"tech"},
