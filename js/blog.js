@@ -275,6 +275,7 @@ $(function() {
             $.get('post/' + this.article + '.md', function(data) {
                 that.model = data;
                 that.render();
+				window.scrollTo(0,0);//回到顶部
             });
 
         },
@@ -476,7 +477,7 @@ $(function() {
             "show/:article": "show",
             "page/:num":"page"
         },
-        make_main_view: function(cate, article,pagenum) {
+        make_main_view: function(cate, article, pagenum) {
             if(!this.main) {
                 this.main = new blog.views.Main();
             }

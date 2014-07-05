@@ -8,6 +8,10 @@
         {"name": "other", "text":"其它"}
     ],
     "articles":[
+	{"title": "信号量耗尽导致apache无法启动的处理办法", "file": "2014-07-05-apache", "cate":"tech"},
+	{"title": "C++编写PHP扩展笔记", "file": "2014-07-05-php-extension", "cate":"tech"},
+	{"title": "linux下phantomJS输出中文乱码解决方法", "file": "2014-06-30-phantomJS", "cate":"tech"},
+	{"title": "linux下/etc/hosts修改后不生效解决方法", "file": "2014-06-29-hosts", "cate":"tech"},
 	{"title": "jQuery的事件演变", "file": "2014-03-24-jquery", "cate":"tech"},
 	{"title": "addEventListener和handleEvent", "file": "2014-03-24-handleEvent", "cate":"tech"},
 	{"title": "每天来点儿负能量（精选）", "file": "2014-03-24-other", "cate":"other"},
