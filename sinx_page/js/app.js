@@ -206,8 +206,6 @@ function _checkError(succCallback){
 	//
 }
 
-//todo debug
-//step_style();
-step_profile()
+step_style();
 
 })();
