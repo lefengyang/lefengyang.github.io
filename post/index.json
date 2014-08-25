@@ -9,6 +9,7 @@
         {"name": "other", "text":"其它"}
     ],
     "articles":[
+	{"title": "html5调用手机摄像头拍照", "file": "2014-07-07-html5-camera", "cate":"tech"},
 	{"title": "近期摄影作品", "file": "2014-07-05-photo", "cate":"photo"},
 	{"title": "信号量耗尽导致apache无法启动的处理办法", "file": "2014-07-05-apache", "cate":"tech"},
 	{"title": "C++编写PHP扩展笔记", "file": "2014-07-05-php-extension", "cate":"tech"},
