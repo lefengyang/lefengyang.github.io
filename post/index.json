@@ -2,7 +2,7 @@
     "site_name": "羊君碎碎念",
     "copyright": "SYSCDE",
     "cates": [
-        {"name": "tech", "text":"工作"},
+        {"name": "tech", "text":"技术"},
         {"name": "life", "text":"生活"},
 	{"name": "photo", "text":"摄影"},
 	{"name": "observe", "text":"互联网观察"},
