@@ -10,6 +10,7 @@
     ],
     "articles":[
 	{"title": "nodejs学习（一）", "file": "2014-08-25-nodejs1", "cate":"tech"},
+	{"title": "大事看条理，小事看细节", "file": "2014-08-18-word", "cate":"life"},
 	{"title": "海边", "file": "2014-08-10-photo", "cate":"photo"},
 	{"title": "thinkphp使用小结（一）", "file": "2014-08-01-thinkphp1", "cate":"tech"},
 	{"title": "html5调用手机摄像头拍照", "file": "2014-07-07-html5-camera", "cate":"tech"},
