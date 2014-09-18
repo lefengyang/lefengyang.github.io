@@ -4,7 +4,7 @@
     "cates": [
         {"name": "tech", "text":"技术"},
         {"name": "life", "text":"生活"},
-	{"name": "photo", "text":"摄影"},
+	{"name": "photo", "text":"图片"},
 	{"name": "observe", "text":"互联网观察"},
         {"name": "other", "text":"其它"}
     ],
