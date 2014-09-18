@@ -10,6 +10,7 @@
     ],
     "articles":[
 	{"title": "关于数值类型转换", "file": "2014-09-18-math", "cate":"tech"},
+	{"title": "第三届HTML5峰会-深圳", "file": "2014-09-15-iweb", "cate":"tech"},
 	{"title": "局域网中进行手机抓包", "file": "2014-09-14-spider", "cate":"tech"},
 	{"title": "nodejs学习（一）", "file": "2014-08-25-nodejs1", "cate":"tech"},
 	{"title": "大事看条理，小事看细节", "file": "2014-08-18-word", "cate":"life"},
