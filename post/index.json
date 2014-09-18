@@ -10,6 +10,7 @@
     ],
     "articles":[
 	{"title": "microsoft居然花25亿美刀收购了minecraft", "file": "2014-09-18-minecraft", "cate":"observe"},
+	{"title": "其实我们一直误解了负能量？", "file": "2014-09-18-fu", "cate":"other"},
 	{"title": "关于数值类型转换", "file": "2014-09-18-math", "cate":"tech"},
 	{"title": "第三届HTML5峰会-深圳", "file": "2014-09-15-iweb", "cate":"tech"},
 	{"title": "局域网中进行手机抓包", "file": "2014-09-14-spider", "cate":"tech"},
