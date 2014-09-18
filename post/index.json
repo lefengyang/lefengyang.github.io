@@ -9,6 +9,7 @@
         {"name": "other", "text":"其它"}
     ],
     "articles":[
+	{"title": "人生不是一场马拉松", "file": "2014-09-19-malathon", "cate":"other"},
 	{"title": "microsoft居然花25亿美刀收购了minecraft", "file": "2014-09-18-minecraft", "cate":"observe"},
 	{"title": "其实我们一直误解了负能量？", "file": "2014-09-18-fu", "cate":"other"},
 	{"title": "关于数值类型转换", "file": "2014-09-18-math", "cate":"tech"},
