@@ -9,6 +9,7 @@
         {"name": "other", "text":"其它"}
     ],
     "articles":[
+	{"title": "thinkphp记录PHP的notice日志", "file": "2014-10-16-thinkphp", "cate":"tech"},
 	{"title": "vsftpd设置虚拟目录", "file": "2014-09-29-vsftpd", "cate":"tech"},
 	{"title": "人生不是一场马拉松", "file": "2014-09-19-malathon", "cate":"other"},
 	{"title": "microsoft居然花25亿美刀收购了minecraft", "file": "2014-09-18-minecraft", "cate":"observe"},
