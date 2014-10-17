@@ -9,6 +9,7 @@
         {"name": "other", "text":"其它"}
     ],
     "articles":[
+	{"title": "对https的一点理解", "file": "2014-10-17-https", "cate":"tech"},
 	{"title": "thinkphp记录PHP的notice日志", "file": "2014-10-16-thinkphp", "cate":"tech"},
 	{"title": "JS错误上报", "file": "2014-10-15-badjs", "cate":"tech"},
 	{"title": "thinkphp的支付宝插件", "file": "2014-10-09-alipay", "cate":"tech"},
