@@ -9,6 +9,7 @@
         {"name": "other", "text":"其它"}
     ],
     "articles":[
+	{"title": "使用nginx_lua_module模块使json输出变成jsonp", "file": "2015-04-10-nginx_lua_module", "cate":"tech"},
 	{"title": "防止网页被Frame", "file": "2014-10-22-iframe", "cate":"tech"},
 	{"title": "JS变量作用域及预编译", "file": "2014-10-21-js", "cate":"tech"},
 	{"title": "对https的一点理解", "file": "2014-10-17-https", "cate":"tech"},
